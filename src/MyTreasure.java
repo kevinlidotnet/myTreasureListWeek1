@@ -16,8 +16,8 @@ public class MyTreasure {
     }
 
     public void setLocation(String location) {
-        if (location=="none")
-            throw new IllegalArgumentException("invalid argument.");
+        if (location.contains("xxx"))
+            throw new IllegalArgumentException("invalid location of xxx.");
         this.location = location;
     }
 
@@ -26,6 +26,8 @@ public class MyTreasure {
     }
 
     public void setImageUrl(String imageUrl) {
+        if (!imageUrl.contains("http://"))
+            throw new IllegalArgumentException("invalid argument.");
         this.imageUrl = imageUrl;
     }
 
