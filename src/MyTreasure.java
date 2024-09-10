@@ -26,7 +26,7 @@ public class MyTreasure {
     }
 
     public void setImageUrl(String imageUrl) {
-        if (!imageUrl.contains("http://"))
+        if (!imageUrl.contains("http"))
             throw new IllegalArgumentException("invalid argument.");
         this.imageUrl = imageUrl;
     }
